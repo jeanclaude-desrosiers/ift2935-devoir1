@@ -1,0 +1,13 @@
+Notes : 
+1- Nous avons utilisés l'ensemble des attributs d'une personnes comme clés primaires pour s'assurer de l'unicité de la personne rechercher comme nous n'avons pas d'identifiant unique à notre disposition (ie NAS)
+2- Relation cyclique entre parents et individus, ont veux une BD de taille fini, ont permet à l'individu à la racine d'être son propre parent
+
+Contraintes d'intégrités:
+
+1- Un individus doit absolument avoir 2 parents (sauf racine)
+2- Étant donnée que dans notre base de donnée, le mariage doit être entre un home et une femme, la contrainte qui explique cela se traduit par : Le sexe d'un individus ne peut pas être le même que son partenaire.
+3- La date de décès doit être supérieur ou égal à la date de naissance  
+4- La date de divorce doit être supérieur ou égal à la date de mariage
+5- Au plus une mariage ou la date de divorce est NULL.
+6- La date de mariage du dernier mariage doit être supérieur ou égale à la date de divorce du mariage précédent.
+7- Toutes les dates doivent être inférieur ou égal à aujourd'hui

@@ -1,0 +1,13 @@
+Notes :
+1- Date de restitution est de cardinalité 0:1 puisqu'il est possible qu'un utilisateur ne ramère jamais la cassette
+2- Date de fin de location est de cardinalité 1:1 puisqu, une date est créer dans la BD au moment de la location
+3- Nous avons penser à mettre frais_location et prix_achat dans film, mais nous nous somes dis que si jamais une cassette était endommagé, elle pourrait avoir un prix de location différent de celles en bonne état, donc ces attributs devraient être propre à la cassette et non au film sur la cassette.
+
+
+Contraintes:
+1- Salaire doit être >=0
+2- Date d'inscription d'un membre doit être <= à aujourd'hui
+3- Cassetes doivent avoir un prix_achat > 0 et un coût de location >0
+4- (date de location <= date de restitution) && (date de location < date de fin de location).
+5- Toutes dates doit être d'un format valide
+6- Code postal de longueur 6 et numéro de téléphone de longueur 10
